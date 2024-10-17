@@ -9,10 +9,6 @@ This project contains Python scripts for downloading and processing weather data
 - Outputs the data into structured CSV files for use with the General Lake Model.
 
 ## Installation
-Clone this repository to your local machine using:
-
-git clone https://your-repository-url-here
-
 To run these scripts, you will need Python 3 and some additional packages. Install the required packages using pip:
 
 pip install numpy requests beautifulsoup4
