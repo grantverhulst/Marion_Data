@@ -43,9 +43,11 @@ writers = {name: csv.writer(file) for name, file in files.items()}
 # Initialize with headers if needed
 for name, writer in writers.items():
     if name == 'meteo':
-        writer.writerow(['date', 'short_wave', 'long_wave', 'temperature', 'relative_humidity', 'windspeed', 'rain', 'snow'])
-    else:
-        writer.writerow(['date', name])
+        writer.writerow(['Date', 'ShortWave', 'LongWave', 'AirTemp', 'RelHum', 'WindSpeed', 'Rain', 'Snow'])
+    if name == 'inflow':
+        writer.writerow(['Date','FLOW'])
+    if name == 'outflow':
+        writer.writerow(['Date', name])
 
 # Define the date range
 start_date = datetime(2024, 5, 18).date()
