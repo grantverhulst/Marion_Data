@@ -1,7 +1,7 @@
 # Marion Weather Data Processing
 
 ## Project Description
-This project contains Python scripts for downloading and processing weather data for Marion Lake. It automates the extraction of data from the USACE Marion Reservoir webpage, processes it, and stores it in CSV files for meteorological data, inflow, and outflow from Marion Lake.
+This repo contains Python scripts for downloading and processing weather data for Marion Lake. It automates the extraction of data from the USACE Marion Reservoir webpage, processes it, and stores it in CSV files for meteorological data, inflow, and outflow from Marion Lake.
 
 ## Features
 - Automatically scrapes hourly weather data from the USACE Marion Reservoir webpage.
