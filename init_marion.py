@@ -40,7 +40,7 @@ filenames = {
 files = {name: open(filename, 'a', newline='') for name, filename in filenames.items()}
 writers = {name: csv.writer(file) for name, file in files.items()}
 
-# Initialize with headers if needed
+# Initialize with correct headers for General Lake Model
 for name, writer in writers.items():
     if name == 'meteo':
         writer.writerow(['Date', 'ShortWave', 'LongWave', 'AirTemp', 'RelHum', 'WindSpeed', 'Rain', 'Snow'])
@@ -64,7 +64,7 @@ for single_date in date_generated:
     current_year = single_date.year
 
     if results:
-        data_string = results.text.strip().replace('----', 'nan')
+        data_string = results.text.strip().replace('----', '0')
         data_lines = re.split(r'(?=\d{2}/\d{2} \d{2}:\d{2})', data_string)[1:]
         for line in data_lines:
             parts = line.split()

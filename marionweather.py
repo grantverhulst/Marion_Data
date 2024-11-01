@@ -60,7 +60,7 @@ else:
     current_year = datetime.now().year
 
     if results:
-        data_string = results.text.strip().replace('----', 'nan')
+        data_string = results.text.strip().replace('----', '0')
         data_lines = re.split(r'(?=\d{2}/\d{2} \d{2}:\d{2})', data_string)[1:]
         for line in data_lines:
             parts = line.split()
